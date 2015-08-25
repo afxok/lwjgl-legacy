@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
+	<classpathentry kind="con" path="org.eclipse.pde.core.requiredPlugins"/>
+	<classpathentry exported="true" kind="lib" path="AppleJavaExtensions.jar"/>
+	<classpathentry exported="true" kind="lib" path="asm-debug-all.jar"/>
+	<classpathentry exported="true" kind="lib" path="jinput.jar"/>
+	<classpathentry exported="true" kind="lib" path="laf-plugin-7.2.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="laf-widget-7.2.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="log4j-api-2.0-beta9.jar"/>
+	<classpathentry exported="true" kind="lib" path="lwjgl_test.jar"/>
+	<classpathentry exported="true" kind="lib" path="lwjgl_util_applet.jar"/>
+	<classpathentry exported="true" kind="lib" path="lwjgl_util.jar"/>
+	<classpathentry exported="true" kind="lib" path="lwjgl.jar" sourcepath="/Users/anthony/Downloads/lwjgl-lwjgl2.9.3/src"/>
+	<classpathentry exported="true" kind="lib" path="lzma.jar"/>
+	<classpathentry exported="true" kind="lib" path="substance-7.2.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="trident-7.2.1.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
