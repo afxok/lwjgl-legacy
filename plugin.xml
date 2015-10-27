@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin>
+   <!-- runtime>
+       <library name="lwjgl.jar">
+        <export name="*"/>
+        <packages prefix="org.lwjgl"/>
+       </library>
+   </runtime -->
+</plugin>
