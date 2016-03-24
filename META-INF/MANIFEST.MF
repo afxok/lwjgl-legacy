@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: LWJGL Legacy
-Bundle-SymbolicName: org.lwjgl
+Bundle-SymbolicName: org.lwjgl;singleton:=true
 Bundle-Version: 2.9.3
 Bundle-ClassPath: AppleJavaExtensions.jar,
  asm-debug-all.jar,
@@ -17,15 +17,18 @@ Bundle-ClassPath: AppleJavaExtensions.jar,
  substance-7.2.1.jar,
  trident-7.2.1.jar
 Bundle-NativeCode: native/macosx/liblwjgl.dylib; native/macosx/libopenal.dylib; native/macosx/libjinput-osx.dylib;
-    osname=MacOSX; processor=x86_64,
+    osname=MacOSX; processor=x86; processor=x86_64,
   native/linux/liblwjgl32.so; native/linux/libopenal.so; native/macosx/libjinput-linux.so;
     osname=Linux; processor=x86,
   native/linux/liblwjgl.so; native/linux/libopenal64.so; native/macosx/libjinput-linux64.so;
     osname=Linux; processor=x86_64,
-  native/windows/lwjgl.dll; native/windows/OpenAL32.dll; native/windows/jinput-dx8.dll; native/windows/jinput-raw.dll;
+  native/windows/lwjgl64.dll; native/windows/OpenAL32.dll; native/windows/jinput-dx8.dll; native/windows/jinput-raw.dll;
     osname=Win32; processor=x86,
   native/windows/lwjgl64.dll; native/windows/OpenAL64.dll; native/windows/jinput-dx8_64.dll; native/windows/jinput-raw_64.dll;
-    osname=Win32; processor=x86_64
+    osname=Win32; processor=x86_64,
+  native/windows/lwjgl64.dll; native/windows/OpenAL64.dll; native/windows/jinput-dx8_64.dll; native/windows/jinput-raw_64.dll;
+    osname=Win32; processor=amd64,
+  *
 Bundle-Vendor: LWJGL
 Export-Package: LZMA,
  com.apple.eawt,
@@ -91,10 +94,13 @@ Export-Package: LZMA,
  org.pushingpixels.lafwidget.desktop,
  org.pushingpixels.lafwidget.menu,
  org.pushingpixels.lafwidget.preview,
+ org.pushingpixels.lafwidget.resources,
  org.pushingpixels.lafwidget.scroll,
+ org.pushingpixels.lafwidget.scroll.resource,
  org.pushingpixels.lafwidget.tabbed,
  org.pushingpixels.lafwidget.text,
  org.pushingpixels.lafwidget.tree.dnd,
+ org.pushingpixels.lafwidget.tree.dnd.icons,
  org.pushingpixels.lafwidget.utils,
  org.pushingpixels.substance.api,
  org.pushingpixels.substance.api.colorscheme,
@@ -113,31 +119,34 @@ Export-Package: LZMA,
  org.pushingpixels.substance.api.tabbed,
  org.pushingpixels.substance.api.trait,
  org.pushingpixels.substance.api.watermark,
- org.pushingpixels.substance.internal.animation,
- org.pushingpixels.substance.internal.colorscheme,
- org.pushingpixels.substance.internal.contrib.jgoodies.looks,
- org.pushingpixels.substance.internal.contrib.jgoodies.looks.common,
- org.pushingpixels.substance.internal.contrib.randelshofer.quaqua,
- org.pushingpixels.substance.internal.contrib.randelshofer.quaqua.colorchooser,
- org.pushingpixels.substance.internal.contrib.randelshofer.quaqua.util,
- org.pushingpixels.substance.internal.contrib.xoetrope.editor.color,
- org.pushingpixels.substance.internal.fonts,
- org.pushingpixels.substance.internal.inputmaps,
- org.pushingpixels.substance.internal.painter,
- org.pushingpixels.substance.internal.plugin,
- org.pushingpixels.substance.internal.ui,
- org.pushingpixels.substance.internal.utils,
- org.pushingpixels.substance.internal.utils.border,
- org.pushingpixels.substance.internal.utils.combo,
- org.pushingpixels.substance.internal.utils.filters,
- org.pushingpixels.substance.internal.utils.icon,
- org.pushingpixels.substance.internal.utils.menu,
- org.pushingpixels.substance.internal.utils.scroll,
+ org.pushingpixels.substance.internal.animation;x-internal:=true,
+ org.pushingpixels.substance.internal.colorscheme;x-internal:=true,
+ org.pushingpixels.substance.internal.contrib.jgoodies.looks;x-internal:=true,
+ org.pushingpixels.substance.internal.contrib.jgoodies.looks.common;x-internal:=true,
+ org.pushingpixels.substance.internal.contrib.randelshofer.quaqua;x-internal:=true,
+ org.pushingpixels.substance.internal.contrib.randelshofer.quaqua.colorchooser;x-internal:=true,
+ org.pushingpixels.substance.internal.contrib.randelshofer.quaqua.images;x-internal:=true,
+ org.pushingpixels.substance.internal.contrib.randelshofer.quaqua.util;x-internal:=true,
+ org.pushingpixels.substance.internal.contrib.xoetrope.editor.color;x-internal:=true,
+ org.pushingpixels.substance.internal.fonts;x-internal:=true,
+ org.pushingpixels.substance.internal.inputmaps;x-internal:=true,
+ org.pushingpixels.substance.internal.painter;x-internal:=true,
+ org.pushingpixels.substance.internal.plugin;x-internal:=true,
+ org.pushingpixels.substance.internal.resources;x-internal:=true,
+ org.pushingpixels.substance.internal.ui;x-internal:=true,
+ org.pushingpixels.substance.internal.utils;x-internal:=true,
+ org.pushingpixels.substance.internal.utils.border;x-internal:=true,
+ org.pushingpixels.substance.internal.utils.combo;x-internal:=true,
+ org.pushingpixels.substance.internal.utils.filters;x-internal:=true,
+ org.pushingpixels.substance.internal.utils.icon;x-internal:=true,
+ org.pushingpixels.substance.internal.utils.menu;x-internal:=true,
+ org.pushingpixels.substance.internal.utils.scroll;x-internal:=true,
  org.pushingpixels.trident,
  org.pushingpixels.trident.android,
  org.pushingpixels.trident.callback,
  org.pushingpixels.trident.ease,
  org.pushingpixels.trident.interpolator,
  org.pushingpixels.trident.swing,
- org.pushingpixels.trident.swt
+ org.pushingpixels.trident.swt,
+ resource
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
